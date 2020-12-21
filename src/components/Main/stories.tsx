@@ -22,14 +22,15 @@ export default {
   component: Main,
   // argTypes,
   args: {
-    title: 'Titulo default',
-    description: 'Description Default'
-  } // Pode-se declarar os args cos valores default aqui tb
+    title: 'title default',
+    description: 'description default'
+  }
 } as Meta
 
 export const Basic: Story = (args) => <Main {...args} />
-//Opcional caso os valores defaults já tenham sido definidos no próprio componente
-// Basic.args = {
-//   title: 'React Avançado',
-//   description: 'TypeScript, ReactJS, NextJS e Styled Component'
-// }
+Basic.args = {
+  title: 'title basic',
+  description: 'description basic'
+}
+
+export const Default: Story = (args) => <Main {...args} />
